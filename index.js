@@ -100,14 +100,14 @@ const init = async () => {
   `;
     await client.query(createTableQuery);
     console.log("tables created");
-    // const insertDataQuery = `
-    //     INSERT INTO flavors (name, is_favorite) VALUES
-    //       ('vanilla', false),
-    //       ('cherry', true),
-    //       ('Chocolate', true);
-    //   `;
+    const insertDataQuery = `
+        INSERT INTO flavors (name, is_favorite) VALUES
+          ('vanilla', false),
+          ('cherry', true),
+          ('Chocolate', true);
+      `;
 
-    // await client.query(insertDataQuery);
+    await client.query(insertDataQuery);
 
     console.log("data seeded");
     const port = process.env.PORT || 3000;
